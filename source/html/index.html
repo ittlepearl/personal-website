@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Qishan Zhu</title>
+    <script src="https://use.fontawesome.com/06afce4d8e.js"></script>
+</head>
+
+<body>
+  <header id = "header-main">
+    <li><img src="./assets/images/websiteLogo.png" alt="Meet Qishan Zhu"></li>
+    <ul>
+      <li id = "nav-to-field"><a id = "part1">Field</a></li>
+      <li id = "nav-to-edu"><a id = "part2">Education</a></li>
+      <li id = "nav-to-photo"><a id = "part3">Photos</a></li>
+      <li id = "nav-to-contact"><a id = "part4">Contact</a></li>
+    </ul>
+  </header>
+
+	<div class = "welcome">
+  		<video src="./assets/video/welcomeVideo.mp4" autoplay loop="loop">
+ 		</video>
+   		<h1 id = "welcomeSlogan">Hello, nice to meet you<br>I am Qishan Zhu</h1>
+	</div>
+
+  <div id = "field">
+    <h1 class = "field-theme-name"> Field </h3>
+    <div class = "field-flex-container">
+	    <div class="field-flex-item">
+        <button id="ai-detail-btn"><img src = "./assets/images/field_ai_icon.svg" \></button>
+		    <h3>Artificial Intelligence</h3>
+		    <p>Apply artifial intelligence in many fields such as smart medical and smart home.</p>
+		    <p>Click the icon for detailed project.</p>
+		  </div>
+		  <div class = "field-flex-item">
+        <button id="img-detail-btn"><img src = "./assets\images\field_image_icon.svg" \></button>
+	      <h3>Image Processing</h3>
+	    	<p>Interested both traditional digital image processing and image processing using machine learning.</p>
+      	<p>Click the icon for projects.</p>
+	    </div>
+	    <div class = "field-flex-item">
+        <button id="web-detail-btn"><img src = "./assets\images\field_web_icon.svg" \></button>
+	      <h3>Web Programming</h3>
+	      <p>As a starter, I also have enormous passion for this fabulous world.</p>
+	      <p>Click the icon for projects.</p>
+	    </div>
+		</div>
+
+     <div id="ai-detail" class="detail-modal">
+      <div class="detail-modal-content">
+        <header>
+          <h3>Pulmonary Tuberculosis Detection</h3>
+        </header>
+        <div>
+          <p>Pulmonary Parenchyma Extraction</p>
+          <p>Applied algorithms including binarization, opening operation, hole filling and masking for pulmonary parenchyma extraction from two-dimensional slices of CT images.</p>
+          <p>ROI extraction</p>
+          <p>Used techniques including filter, dilation and shape detection to get ROIs (region of interest) that is possible to be a pulmonary tuberculosis.</p>
+          <p>Support Vector Machine classifier</p>
+          <p>Used linear Support Vector Machine classier and improved the final accuracy to 95.21%.</p>
+        </div>
+        <button  id = "ai-close-btn" class = "close-btn">Close the Window</button>
+      </div>
+    </div>
+    <div id="img-detail" class="detail-modal">
+      <div class="detail-modal-content">
+        <header>
+          <h3>Fish-eye Image Correction</h3>
+        </header>
+        <div>
+          <p>Fish-eye Distortion Model Design</p>
+          <p>Built a division model to simulate pixel relationship. Used nonlinear optimizationto find parameters for any camera.</p>
+          <p>Fish-eye Distortion Correction</p>
+          <p>Used bilinear interpolation to map distorted image into undistorted image.</p>
+          <p>Optimization</p>
+          <p>Wrote pixel relationship into binary file and used pixel scaling transform for optimization. Correction time decreased from 6.9 seconds to 0.344 seconds.</p>
+        </div>
+        <button  id = "img-close-btn" class = "close-btn">Close the Window</button>
+      </div>
+    </div>
+    <div id="web-detail" class="detail-modal">
+      <div class="detail-modal-content">
+        <header>
+          <h3>Web Programming Starter</h3>
+        </header>
+        <div>
+          <p>Single Page Website</p>
+          <p>It is just this website!</p>
+          <p>To be continued....</p>
+        </div>
+        <button  id = "web-close-btn" class = "close-btn">Close the Window</button>
+      </div>
+    </div>
+  </div>
+
+  <div id = "education">
+  	<div class = "education-flex-container">
+  	 	<div class = "education-flex-item">
+  	   		<img src="./assets/images/ZJU_logo.png" \>
+  	   		<h3>Zhejiang University,<br>Bachelor of Information Engineering<br>2014-2017</h3>
+   		</div>
+	    <div class = "education-flex-item">
+	     	<img src="./assets/images/UIUC_logo.png"／>
+	      	<h3>University of Illinois at Urbana-Champaign<br>Master of Computer Engineering <br>2017-Present</h3>
+	    </div>
+  	</div>
+  </div>
+
+ 	<div class = "intro">
+   		<h3 id = "center-sentence">Know more about me, and my life.</br>～～～～～～～～～～～～～～～～～～</h3>
+ 	</div>
+
+  <div id = "photo">
+    <button id = "leftBtn" ><img src="./assets/images/leftArrow.svg"></button>
+    <button id = "rightBtn" ><img src="./assets/images/rightArrow.svg"></button>
+    <img id = "showImg" src = "./assets/images/photo0.JPG"/>
+
+	</div>
+
+  <div id = "contact">
+    <div class ="contact-flex-container">
+    	<div class ="contact-flex-item">
+   			<i class="fa fa-envelope-o fa-5x" aria-hidden="true"></i>
+     		<p>email<br>qishanz2@illinois.edu</p>
+  		</div>
+  		<div class ="contact-flex-item">
+      		<i class="fa fa-mobile fa-5x" aria-hidden="true"></i>
+      		<p>phone<br>+1 (217)305-1819</p>
+      </div>
+      <div class ="contact-flex-item">
+        <i class="fa fa-instagram fa-5x" aria-hidden="true"></i>
+      	<p>Instagram<br>ittlepearl33</p>
+        </div>
+    </div>
+  </div>
+
+  <div class = "footer">
+    <p>Designed and developed / by Qishan Zhu. <br> All rights reserve.</p>
+  </div>
+  <script src="bundle.js" type="text/javascript"></script>
+</body>
+
+</html>

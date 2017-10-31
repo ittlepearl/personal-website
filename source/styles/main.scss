@@ -1,0 +1,304 @@
+body{
+  margin:0px 0px;
+  font-family:"Playfair Display","Helvetica Neue", "Arial", "sans-serif";
+}
+h1{
+  font-size:6vmin;
+}
+h3{
+  font-size:3vmin;
+}
+p{
+  font-size:2vmin;
+  font-family: Avenir, 'Proxima Nova', sans-serif;
+}
+/* - header - */
+#header-main{
+	position: absolute;
+ 	background:linear-gradient(to right, #f5f7fa,#c3cfe2);
+	width: 100%;
+  font-size: 3vmin;
+	letter-spacing: 0.5vmin;
+	z-index: 4;
+}
+#header-main img{
+  height: 9vmin;
+}
+#header-main.active{
+	position: fixed;
+	top:0;
+	background: #666;
+	width: 100%;
+  font-size: 2vmin;
+	z-index: 4;
+	height: 7vmin;
+	animation:animatetop 0.4s}
+  @keyframes animatetop{
+    from{top:-300px;opacity:0}
+    to{top:0;opacity:1
+    }
+}
+
+#header-main ul{
+  margin:1vmin;
+	float: right;
+}
+#header-main li {
+	background: transparent;
+ 	list-style: none;
+  	float: left;
+ 	right: 0;
+}
+#header-main li a{
+  padding: 2vmin;
+  display:block; /*makes the whole link area clickable (not just the text)*/
+  text-decoration: none;
+  color:white; /*set inside li a can make the href not to be blue*/
+}
+#header-main li a:hover { /*selected one*/
+  text-decoration: underline;
+}
+
+#header-main.active img{
+	height: 6vmin;
+	padding: 0.5vmin;
+}
+#header-main.active li a{
+	top:0;
+	padding-top: 0;
+	padding-bottom: 0;
+	letter-spacing: 0.3vmin;
+}
+#header-main.active ul{
+  margin: 2vmin;
+}
+
+/* -welcome video and slogan */
+.welcome{
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+video{
+  position:relative;
+  type:"video/mp4";
+  height:auto;
+  width:100%;
+  z-index:-1;/*set it below the slogan*/
+  margin: 0 0;
+  padding: 0 0;
+}
+#welcomeSlogan {
+  letter-spacing: 1vmin;
+  width:100%;
+  position:absolute;
+  color:white;
+  font-size: 5vw;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  z-index:3;
+  text-align:center;
+}
+
+/* field */
+#field {
+  margin-top: 0;
+  background-color:#eeeeee;
+  height:100vmin;
+}
+
+.field-theme-name{
+  letter-spacing: 1vmin;
+  position:relative;
+  margin-top: 0;
+  padding-top: 10vmin;
+  padding-bottom: 0vmin;
+  text-decoration: underline;
+  color:grey;
+  text-align: center;
+  transform:translate(0%,0%);
+}
+
+.field-flex-container{
+  margin-top: 5vmin;
+  position:relative;
+  justify-content: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.field-flex-item{
+  padding:2%;
+  width:20%;
+  color:grey;
+  text-align:center;
+}
+.field-flex-item img{
+  height: 27vmin;
+}
+.field-flex-item img:hover { /*selected one*/
+  opacity: 0.5;
+}
+
+.field-flex-item button{
+  background:transparent;
+  border:none;
+}
+/* -filed-modal- */
+.detail-modal{
+  z-index:3;
+  display:none;
+  padding-top:10%;
+  position:fixed;
+  left:0;top:0;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  background-color:rgb(0,0,0);
+  background-color:rgba(0,0,0,0.4); /* make the background remain in the last page*/
+}
+.detail-modal-content{
+  margin:auto;
+  background:linear-gradient(to top,#cfd9df,#e2ebf0);
+  position:relative;
+  padding: 2%;
+  padding-top: 0;
+  outline:0;
+  width:40%;
+  animation:animatetop 0.4s}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}
+}
+.detail-modal-content header {
+  background-color: #c3cfe2;
+  color:white;
+  text-align: center;
+  margin: 0;
+  height: 4vmin;
+}
+.detail-modal-content p {
+  color:white;
+  text-align: center;
+}
+.detail-modal-content .close-btn{
+  position: relative;
+  background:#c3cfe2;
+  border: none;
+  color: white;
+  text-decoration: underline;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+@mixin flex-container($heightNum:60vmin) {
+  justify-content: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: $heightNum;
+}
+/* education */
+.education-flex-container{
+  @include flex-container(60vmin);
+  position:relative;
+  margin:0px 0px;
+  //height:60vmin; /*doesnt work*/
+  background-image:url('./assets/images/eduBg.JPG');
+  background-attachment: fixed;
+  background-size: 100%;
+}
+.education-flex-item{
+  position:relative;
+  padding:2%;
+  width:40%;
+  color:white;
+  text-align:center;
+  top:0;
+}
+.education-flex-container img{
+  height:20vmin;
+}
+
+/* photo and its intro */
+.intro{
+  position: relative;
+  background-color:#eeeeee;
+  color:grey;
+  height:65vmin;
+  width:100%;
+  margin: 0;
+  border: solid #eeeeee;
+}
+
+.intro h3{
+  position: relative;
+  text-align: center;
+  padding-top:0;
+  padding-bottom:0;
+  top:38%;
+  width: auto;
+}
+
+#photo{
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #eeeeee;
+  margin-bottom: 0;
+}
+#photo img{
+	width:100%;
+  position: relative;
+}
+@mixin photoBtn{
+  position: absolute;
+  height: 8vmin;
+  width: 8vmin;
+  top: 50%;
+  transform: translate(0,-50%);
+  background:transparent;
+  border:none;
+  z-index: 1;
+}
+#leftBtn{
+  @include photoBtn;
+  left: 0;
+}
+#leftBtn:hover { /*selected one*/
+  opacity: 0.5;
+}
+
+#rightBtn{
+  @include photoBtn;
+  right: 0;
+}
+#rightBtn:hover { /*selected one*/
+  opacity: 0.5;
+}
+
+.contact-flex-container{
+  @include flex-container(30vmin);
+  margin-top: 0;
+  margin:0px 0px;
+  //height:30vmin;
+  background-color: #eeeeee;
+}
+.contact-flex-item{
+  position:relative;
+  padding:2%;
+  width:20%;
+  color:#333;
+  font-size: 1vmin;
+  text-align:center;
+  max-width: 50%;
+}
+
+
+.footer{
+  font-family: Avenir, 'Proxima Nova', sans-serif;
+  letter-spacing: 0.5vmin;
+  position: absolute;
+  background-color:#666;
+  color:white;
+  height:9vmin;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 auto;
+}
